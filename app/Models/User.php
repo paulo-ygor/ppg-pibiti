@@ -13,6 +13,12 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    public const SUPER_ADMIN = 1;
+    public const USER_ROLES = [
+        self::SUPER_ADMIN
+    ];
+    
+
     /**
      * The attributes that are mass assignable.
      *
