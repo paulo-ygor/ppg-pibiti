@@ -11,9 +11,24 @@
                 <x-app-logo />
             </a>
 
+        
+
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item :href="route('program.edit')" 
+                    :current="request()->routeIs('program.edit')" 
+                    wire:navigate>{{ __('Criar Programa') }}</flux:navlist.item>
+                    <flux:navlist.item :href="route('person.edit')" 
+                    :current="request()->routeIs('person.edit')" 
+                    wire:navigate>{{ __('Adiconar Person') }}</flux:navlist.item>
+        
+
+
+
+
+
+                    
                 </flux:navlist.group>
             </flux:navlist>
 
